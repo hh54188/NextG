@@ -2,8 +2,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Hello = () => {
-  return <h1>Hello</h1>;
-};
+import sampleStore from "./modals/SampleStore";
+import App from "./components/App/components";
 
-ReactDOM.render(<Hello />, document.querySelector("#app"));
+ReactDOM.render(<App store={sampleStore} />, document.querySelector("#app"));
