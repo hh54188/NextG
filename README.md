@@ -3,6 +3,7 @@
 http://orlandohamsho.com/javascript/mobx-react-tutorial-building-first-application/
 https://dev.to/satansdeer/react-native-mobx-tutorial---part-1--2df0
 https://dev.to/satansdeer/react-native-mobx-tutorial---part-2--12km
+https://css-tricks.com/react-router-4/
 
 ## Best Practices
 
@@ -11,7 +12,7 @@ https://dev.to/satansdeer/react-native-mobx-tutorial---part-2--12km
 ## Install
 
 ```
-yarn add antd axios immutable lodash moment react react-dom react-helmet react-redux react-refetch react-router react-router-redux redux redux-immutable redux-thunk reselect redux-saga mobx mobx-react
+yarn add antd axios immutable lodash moment react react-dom react-helmet react-redux react-refetch react-router react-router-redux redux redux-immutable redux-thunk reselect redux-saga mobx mobx-react react-router  react-router-dom
 ```
 
 ```

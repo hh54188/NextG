@@ -2,14 +2,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "mobx-react";
-import stores from "./modals";
+import { BrowserRouter } from "react-router-dom";
 
-import sampleStore from "./modals/SampleStore";
-import App from "./components/App/components";
+import stores from "./modals";
+import App from "./components/App";
 
 ReactDOM.render(
-  <Provider {...stores}>
-    <App />
-  </Provider>,
+  <BrowserRouter>
+    <Provider {...stores}>
+      <App />
+    </Provider>
+  </BrowserRouter>,
   document.querySelector("#app")
 );
