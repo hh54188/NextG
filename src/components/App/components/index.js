@@ -1,23 +1,24 @@
 import React from "react";
-import { observer } from "mobx-react";
+import { observer, inject } from "mobx-react";
 
+@inject("sampleStore")
 @observer
 export default class App extends React.Component {
   constructor(props) {
     super(props);
   }
   render() {
-    console.log(this.props);
+    const store = this.props.sampleStore;
     return (
       <div>
-        <h1>{this.props.store.fullName}</h1>
+        <h1>{store.fullName}</h1>
         <input
           placeholder="first name"
-          onChange={event => this.props.store.setFirstName(event.target.value)}
+          onChange={event => store.setFirstName(event.target.value)}
         />
         <input
           placeholder="last name"
-          onChange={event => this.props.store.setLastName(event.target.value)}
+          onChange={event => store.setLastName(event.target.value)}
         />
       </div>
     );

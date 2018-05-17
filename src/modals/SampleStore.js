@@ -1,6 +1,4 @@
-import { observable, action, computed, useStrict } from "mobx";
-
-useStrict(true);
+import { observable, action, computed } from "mobx";
 
 class SampleStore {
   @observable firstName = "";
@@ -13,5 +11,4 @@ class SampleStore {
   @action setLastName = str => (this.lastName = str);
 }
 
-export default new SampleStore();
-export { SampleStore };
+export default SampleStore;
