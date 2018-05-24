@@ -47,7 +47,7 @@ export default class App extends Component {
               marginLeft: -150,
               paddingLeft: 150,
               width: "100%",
-              overflow: "scroll",
+              overflowY: "scroll",
               height: "100%"
             }}
           >
