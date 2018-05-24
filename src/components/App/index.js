@@ -1,42 +1,68 @@
-import React from "react";
-import { Layout, Menu, Icon } from "antd";
+import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-import "antd/dist/antd.css";
-import { observer, inject } from "mobx-react";
+import { observer } from "mobx-react";
+import {
+  Sidebar,
+  Segment,
+  Button,
+  Menu,
+  Image,
+  Icon,
+  Header
+} from "semantic-ui-react";
+import "semantic-ui-css/semantic.min.css";
 
-import UserList from "../UserList";
 import AppLayout from "../AppLayout";
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
-
 @observer
-export default class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+export default class App extends Component {
   render() {
     return (
-      <Layout style={{ minHeight: "100vh" }}>
-        <Sider collapsible>
-          <Menu theme="dark" defaultSelectedKeys={["1"]} mode="inline">
-            <Menu.Item key="1">
-              <Icon type="user" />
-              <span>用户列表</span>
+      <div style={{ height: "100%" }}>
+        <Sidebar.Pushable as={Segment}>
+          <Sidebar
+            as={Menu}
+            animation="push"
+            width="thin"
+            visible={true}
+            icon="labeled"
+            vertical
+            inverted
+          >
+            <Menu.Item name="home">
+              <Icon name="home" />
+              Home
             </Menu.Item>
-          </Menu>
-        </Sider>
-        <Layout>
-          <Switch>
-            <Route
-              path="/"
-              exact
-              component={props => <AppLayout {...props} title="" />}
-            />
-            <Route path="/list" component={UserList} />
-          </Switch>
-        </Layout>
-      </Layout>
+            <Menu.Item name="gamepad">
+              <Icon name="gamepad" />
+              Games
+            </Menu.Item>
+            <Menu.Item name="camera">
+              <Icon name="camera" />
+              Channels
+            </Menu.Item>
+          </Sidebar>
+          <Sidebar.Pusher
+            style={{
+              marginLeft: -150,
+              paddingLeft: 150,
+              width: "100%",
+              overflow: "scroll",
+              height: "100%"
+            }}
+          >
+            <Segment basic>
+              <Switch>
+                <Route
+                  path="/"
+                  exact
+                  component={props => <AppLayout {...props} title="" />}
+                />
+              </Switch>
+            </Segment>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
+      </div>
     );
   }
 }
