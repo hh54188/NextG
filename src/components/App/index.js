@@ -58,6 +58,10 @@ export default class App extends Component {
                   exact
                   component={props => <AppLayout {...props} title="" />}
                 />
+                <Route
+                  path="/users"
+                  component={props => <AppLayout {...props} title="" />}
+                />
               </Switch>
             </Segment>
           </Sidebar.Pusher>

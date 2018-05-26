@@ -3,16 +3,16 @@ import { observable, action, computed, flow } from "mobx";
 
 class UsersStore {
   @observable result = [];
-  @observable isLoading = false;
+  @observable isLoading = true;
   @observable error = "";
 
   fetchUsers = flow(function*() {
     this.result = [];
     this.isLoading = true;
     try {
-      const resposne = yield axios.get("https://randomuser.me/api/?results=10");
+      const response = yield axios.get("https://randomuser.me/api/?results=10");
       this.isLoading = false;
-      this.result = response.results;
+      this.result = response.data.results;
     } catch (error) {
       this.isLoading = false;
       this.error = error;
