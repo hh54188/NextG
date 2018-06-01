@@ -7439,6 +7439,12 @@ semantic-ui-css@^2.3.1:
   dependencies:
     jquery x.*
 
+semantic-ui-less@^2.3.1:
+  version "2.3.1"
+  resolved "http://npm.in.zhihu.com/semantic-ui-less/-/semantic-ui-less-2.3.1.tgz#64cc7f1d1e3b5a831cfcf7655d2e2ddedb5aad8a"
+  dependencies:
+    jquery x.*
+
 semantic-ui-react@^0.80.0:
   version "0.80.0"
   resolved "http://npm.in.zhihu.com/semantic-ui-react/-/semantic-ui-react-0.80.0.tgz#68c43661ba1c73798bb04c17e6c31df4b1bcb0cc"
