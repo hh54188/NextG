@@ -17,7 +17,6 @@ export default class UserList extends React.Component {
     const {
       usersStore: { result, isLoading, error, fetchUsers }
     } = this.props;
-    console.log(this.props.usersStore);
     return (
       <div>
         <Dimmer inverted active={isLoading}>
