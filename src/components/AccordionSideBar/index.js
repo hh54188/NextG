@@ -26,14 +26,14 @@ const SimpleSideBar = props => {
             name="enterprise"
             active={activeItem === "enterprise"}
           >
-            <Link to="/detail">用户详情</Link>
+            <Link to="/users/detail">用户详情</Link>
           </Menu.Item>
           <Menu.Item
             className={styles.textAlignLeft}
             name="consumer"
             active={activeItem === "consumer"}
           >
-            <Link to="/users">用户列表</Link>
+            <Link to="/users/list">用户列表</Link>
           </Menu.Item>
         </Menu.Menu>
       </Menu.Item>

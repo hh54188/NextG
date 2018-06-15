@@ -3,11 +3,11 @@ import { Switch, Route, withRouter } from "react-router-dom";
 import { observer } from "mobx-react";
 import { Sidebar, Segment, Menu, Icon } from "semantic-ui-react";
 import "semantic-ui-css/semantic.min.css";
-import { Transition, animated, config } from "react-spring";
 
 import AppLayout from "../AppLayout";
-// import SimpleSideBar from "../SimpleSideBar";
+import SimpleSideBar from "../SimpleSideBar";
 import AccordionSideBar from "../AccordionSideBar";
+import NestSideBar from "../NestSideBar";
 
 import UserList from "../UserList";
 import UserDetail from "../UserDetail";
@@ -20,7 +20,8 @@ export default class App extends Component {
       <div style={{ height: "100%" }}>
         <Sidebar.Pushable as={Segment}>
           {/* <SimpleSideBar /> */}
-          <AccordionSideBar />
+          {/* <AccordionSideBar /> */}
+          <NestSideBar />
           <Sidebar.Pusher
             style={{
               marginLeft: -150,
@@ -31,33 +32,7 @@ export default class App extends Component {
             }}
           >
             <Segment basic>
-              <Transition
-                config={config.slow}
-                from={{ opacity: 0 }}
-                enter={{ opacity: 1 }}
-                leave={{ opacity: 0, height: 0 }}
-              >
-                {style => {
-                  return (
-                    <animated.div {...style}>
-                      <Switch>
-                        <Route exact path="/detail" component={UserDetail} />
-                        <Route exact path="/users" component={UserList} />
-                        {/* <Route
-                          path="/"
-                          exact
-                          component={props => <AppLayout {...props} title="" />}
-                        />
-                        <Route
-                          path="/users"
-                          component={props => <AppLayout {...props} title="" />}
-                        /> */}
-                      </Switch>
-                    </animated.div>
-                  );
-                }}
-              </Transition>
-              {/* <Switch>
+              <Switch>
                 <Route
                   path="/"
                   exact
@@ -67,7 +42,7 @@ export default class App extends Component {
                   path="/users"
                   component={props => <AppLayout {...props} title="" />}
                 />
-              </Switch> */}
+              </Switch>
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>
