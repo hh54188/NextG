@@ -6924,9 +6924,9 @@ react-slick@~0.23.1:
     lodash.debounce "^4.0.8"
     resize-observer-polyfill "^1.5.0"
 
-react-spring@^5.3.13:
-  version "5.3.13"
-  resolved "http://npm.in.zhihu.com/react-spring/-/react-spring-5.3.13.tgz#064e8922c3ba02a40ec8a794ef7c9939511d4659"
+react-spring@^5.3.18:
+  version "5.3.18"
+  resolved "http://npm.in.zhihu.com/react-spring/-/react-spring-5.3.18.tgz#39cf98265991529799898455210164123a0787be"
   dependencies:
     "@babel/runtime" "7.0.0-beta.49"
 

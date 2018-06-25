@@ -19,9 +19,9 @@ export default class App extends Component {
     return (
       <div style={{ height: "100%" }}>
         <Sidebar.Pushable as={Segment}>
-          {/* <SimpleSideBar /> */}
+          <SimpleSideBar />
           {/* <AccordionSideBar /> */}
-          <NestSideBar />
+          {/* <NestSideBar /> */}
           <Sidebar.Pusher
             style={{
               marginLeft: -150,

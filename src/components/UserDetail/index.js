@@ -1,9 +1,7 @@
 import React from "react";
 
-import styles from "./index.less";
-
-const UserDetail = props => {
-  return <div className={styles.blueColor}>UserDetail</div>;
+const UserDetail = () => {
+  return <div>UserDetail</div>;
 };
 
 export default UserDetail;
