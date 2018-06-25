@@ -22,19 +22,19 @@ const SimpleSideBar = props => {
         </Link>
       </Menu.Item>
       <Menu.Item className={styles.menuItem} name="gamepad">
-        <Link to="/users/list">
+        <Link to="/list">
           <Icon name="gamepad" />
           <span className={styles.menuItemLabel}>List</span>
         </Link>
       </Menu.Item>
       <Menu.Item className={styles.menuItem} name="camera">
-        <Link to="/users/detail">
+        <Link to="/detail">
           <Icon name="camera" />
           <span className={styles.menuItemLabel}>Detail</span>
         </Link>
       </Menu.Item>
       <Menu.Item className={styles.menuItem} name="camera">
-        <Link to="/users/other">
+        <Link to="/other">
           <Icon name="camera" />
           <span className={styles.menuItemLabel}>Other</span>
         </Link>

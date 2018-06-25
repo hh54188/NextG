@@ -18,6 +18,7 @@ export default class AppLayout extends React.Component {
     super(props);
   }
   render() {
+    console.log(this.props.match.path);
     return (
       <div>
         <Header as="h2">
@@ -35,7 +36,13 @@ export default class AppLayout extends React.Component {
             return (
               <Switch>
                 <Route
+                  path={`${this.props.match.path}`}
+                  component={() => <div>HOME</div>}
+                  exact
+                />
+                <Route
                   path={`${this.props.match.path}/list`}
+                  exact
                   component={() => {
                     return (
                       <AnimationWrapper style={style}>
@@ -46,6 +53,7 @@ export default class AppLayout extends React.Component {
                 />
                 <Route
                   path={`${this.props.match.path}/detail`}
+                  exact
                   component={() => {
                     return (
                       <AnimationWrapper style={style}>
@@ -56,6 +64,7 @@ export default class AppLayout extends React.Component {
                 />
                 <Route
                   path={`${this.props.match.path}/other`}
+                  exact
                   component={() => {
                     return (
                       <AnimationWrapper style={style}>
