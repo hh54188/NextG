@@ -18,13 +18,13 @@ const SimpleSideBar = props => {
       <Menu.Item className={styles.menuItem} name="home">
         <Link to="/">
           <Icon name="home" />
-          <span className={styles.menuItemLabel}>Home</span>
+          <span className={styles.menuItemLabel}>Home 家</span>
         </Link>
       </Menu.Item>
       <Menu.Item className={styles.menuItem} name="gamepad">
         <Link to="/list">
           <Icon name="gamepad" />
-          <span className={styles.menuItemLabel}>List</span>
+          <span className={styles.menuItemLabel}>List 列表</span>
         </Link>
       </Menu.Item>
       <Menu.Item className={styles.menuItem} name="camera">
