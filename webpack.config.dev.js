@@ -9,6 +9,7 @@ const PUBLIC_DIR_PATH = path.join(__dirname, "public");
 
 module.exports = merge(common, {
   // devtool: "inline-source-map",
+  mode: "development",
   devServer: {
     contentBase: PUBLIC_DIR_PATH,
     historyApiFallback: true,
