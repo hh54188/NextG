@@ -15,6 +15,10 @@ https://css-tricks.com/react-router-4/
 - https://medium.com/dailyjs/mobx-react-best-practices-17e01cec4140
 - 解决异步问题 [https://cn.mobx.js.org/best/actions.html](https://cn.mobx.js.org/best/actions.html)
 
+## 性能观察
+
+- 是否应该对全局App做 absorve ？
+
 ## Tips
 
 - **MobX helps you do things in a simple straightforward way.**
